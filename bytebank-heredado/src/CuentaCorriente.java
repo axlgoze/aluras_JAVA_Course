@@ -1,5 +1,5 @@
 
-public class CuentaCorriente extends Cuenta{
+public class CuentaCorriente extends Cuenta implements Tributacion{
 
 	public CuentaCorriente(int agencia, int numero) {
 		super(agencia, numero);
@@ -16,4 +16,10 @@ public class CuentaCorriente extends Cuenta{
 		// TODO Auto-generated method stub
 		
 	}
+
+    @Override
+    public double getValorImpuesto() {
+        // TODO Auto-generated method stub
+        return super.saldo *0.01;
+    }
 }

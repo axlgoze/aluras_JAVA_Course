@@ -1,5 +1,5 @@
 
-public abstract class Cuenta{
+public abstract class Cuenta implements Tributacion{
 	private int agencia;
 	private int numero;
 	protected double saldo;

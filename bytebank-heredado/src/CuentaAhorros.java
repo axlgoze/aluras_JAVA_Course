@@ -11,5 +11,11 @@ public class CuentaAhorros extends Cuenta {
 		this.saldo += saldo;
 		
 	}
+
+    @Override
+    public double getValorImpuesto() {
+        // TODO Auto-generated method stub
+        return 0;
+    }
 	
 }
