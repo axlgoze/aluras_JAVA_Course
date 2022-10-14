@@ -1,5 +1,5 @@
 
-public class Flujo {
+public class FlujoConTratamiento {
 	public static void main(String[] args) {
 		System.out.println("Inicio main");
 		metodo1();
@@ -14,7 +14,11 @@ public class Flujo {
 	
 	private static void metodo2() {
 		System.out.println("Inicio de metodo2");
-		throw new ArithmeticException();
 		//System.out.println("Fin de metodo2");
+		
+		throw new ArithmeticException("Surgio un error");
+
+		
+		
 	}	
 }
