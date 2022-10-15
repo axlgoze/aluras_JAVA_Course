@@ -4,10 +4,12 @@ public class TestCuentaExceptionSaldo {
         Cuenta cuenta = new CuentaAhorros(123, 456);
         
         cuenta.depositar(210);
-        cuenta.retirar(210);
-        cuenta.retirar(10);
-        
-        
+        try {
+            cuenta.retirar(210);
+        } catch (SaldoInsuficienteException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
         
     }
 }

@@ -6,7 +6,7 @@ public class CuentaCorriente extends Cuenta implements Tributacion{
 	}
 	
 	@Override
-	public void retirar(double valor) {
+	public void retirar(double valor) throws SaldoInsuficienteException{
 		double valorARetirar = valor + 0.2;
 		super.retirar(valorARetirar);
 	}

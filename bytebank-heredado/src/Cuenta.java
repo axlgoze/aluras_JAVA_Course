@@ -27,7 +27,7 @@ public abstract class Cuenta implements Tributacion{
 	
 	public abstract void depositar(double saldo);
 	
-	public void retirar(double valor) {
+	public void retirar(double valor) throws SaldoInsuficienteException{
 		if(this.saldo < valor) {
 		    throw new SaldoInsuficienteException("No tienes saldo");
 		}
@@ -37,7 +37,12 @@ public abstract class Cuenta implements Tributacion{
 	
 	public boolean transferir( double valor, Cuenta cuenta) {
 		if(this.saldo >= valor ) {
-			this.retirar(valor);
+			try {
+                this.retirar(valor);
+            } catch (SaldoInsuficienteException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
 			cuenta.depositar(valor);
 			return true;
 		}else {
