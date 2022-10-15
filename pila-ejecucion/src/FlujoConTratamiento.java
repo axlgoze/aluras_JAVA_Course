@@ -17,6 +17,7 @@ public class FlujoConTratamiento {
 		//System.out.println("Fin de metodo2");
 		
 		throw new ArithmeticException("Surgio un error");
+		
 
 		
 		
