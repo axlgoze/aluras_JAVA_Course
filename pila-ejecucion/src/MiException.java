@@ -1,5 +1,5 @@
 
-public class MiException extends RuntimeException{
+public class MiException extends Exception{
 	
 	public MiException() {
 		//invoking father's constructor
